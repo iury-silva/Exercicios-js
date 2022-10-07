@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAIS</title>
+</head>
+<body>
+  <h1>Você é estrangeiro?</h1>
+  Onde você mora: <input type="text" id="pais">
+  <input type="button" value="conferir" onclick="conf()">
+
+   <div id="res">
+
+   </div> 
+
+   <script>
+
+    function conf(){
+   
+      var p = window.document.getElementById('pais')
+      var result = window.document.getElementById('res')
+      p = String(pais.value)
+
+      result.innerHTML = `<p>Voce mora no ${p}, amigo!!</p>`
+
+    if(p!="Brasil" && p!="brasil"){
+
+      result.innerHTML += '<p>Voce é estrangeiro amigo!</p>'
+
+    }else
+
+       result.innerHTML += '<p>Voce é brasileiro</p>' 
+    
+  
+  }
+   </script>
+
+</body>
+</html>
